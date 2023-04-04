@@ -1,0 +1,34 @@
+<table mat-table [dataSource]="this.students" class="mat-elevation-z8">
+  <!-- Position Column -->
+  <ng-container matColumnDef="Id">
+    <th mat-header-cell *matHeaderCellDef>Student Id</th>
+    <td mat-cell *matCellDef="let element">{{ element.studentId }}</td>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="Name">
+    <th mat-header-cell *matHeaderCellDef>Name</th>
+    <td mat-cell *matCellDef="let element">{{ element.studentName }}</td>
+  </ng-container>
+
+  <!-- Weight Column -->
+  <ng-container matColumnDef="Stream">
+    <th mat-header-cell *matHeaderCellDef>Stream</th>
+    <td mat-cell *matCellDef="let element">{{ element.stream }}</td>
+  </ng-container>
+
+  <!-- Symbol Column -->
+  <ng-container matColumnDef="Address">
+    <th mat-header-cell *matHeaderCellDef>Address</th>
+    <td mat-cell *matCellDef="let element">{{ element.address }}</td>
+  </ng-container>
+
+  <!-- Symbol Column -->
+  <ng-container matColumnDef="PhoneNumber">
+    <th mat-header-cell *matHeaderCellDef>Phone Number</th>
+    <td mat-cell *matCellDef="let element">{{ element.phoneNumber }}</td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+</table>
