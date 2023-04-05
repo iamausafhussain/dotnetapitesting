@@ -9,6 +9,12 @@ const uri = 'https://localhost:7018';
 export class HttpService {
   private getUrl = '/getStudent';
 
+  private postUrl = '/createStudent';
+
+  private putUrl = '/updateStudent';
+
+  private deleteUrl = '/deleteStudent';
+
   constructor(private http: HttpClient) {}
 
   getPosts() {
