@@ -49,6 +49,7 @@ export class TeacherComponent implements OnInit, OnChanges {
     this.httpService.GetTeacherById(this.teacherId);
     this.teacherId = 0;
     this.httpService.currentMessageByTeacherId.subscribe((message) => {
+      this.getTeacherById.splice(0, 1);
       this.getTeacherById.push(message);
       // this.teachers = this.getTeacherById;
     });
